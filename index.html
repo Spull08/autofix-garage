@@ -1,1 +1,260 @@
 
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101114">
+<meta name="description" content="Autohuolto, diagnostiikka ja korjaus Turussa.">
+<title>AutoFix Garage | Turku</title>
+
+<style>
+:root{--bg:#101114;--panel:#191a1f;--red:#f3323b;--text:#f5f5f6;--muted:#a4a5ad;--line:#2b2c32}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1100px,90%);margin:auto}
+header{background:#101114;border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}
+.logo span{color:var(--red)}
+.languages{display:flex;flex-wrap:wrap;gap:5px}
+.lang{background:transparent;color:var(--muted);border:1px solid #393a40;padding:6px 9px;border-radius:5px;cursor:pointer;font-weight:800}
+.lang.active{background:var(--red);border-color:var(--red);color:white}
+.hero{padding:78px 0 72px;background:linear-gradient(90deg,rgba(16,17,20,.96),rgba(16,17,20,.66)),url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat}
+.eyebrow{color:var(--red);font-size:13px;font-weight:800;letter-spacing:2px}
+h1{font-size:clamp(38px,8vw,68px);line-height:1.05;max-width:760px;margin:18px 0;text-transform:uppercase;letter-spacing:-1.5px}
+.hero p{max-width:540px;color:#d0d0d5;font-size:17px}
+.button{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:white;padding:13px 21px;border:1px solid var(--red);border-radius:5px;font-weight:800;margin-top:18px;cursor:pointer;min-height:48px}
+.button:hover{background:#cc202a}
+.button.secondary{background:#25262c;border-color:#494a52}
+section{padding:62px 0}
+.section-title{font-size:30px;line-height:1.2;margin:0 0 10px}
+.section-intro{color:var(--muted);margin:0 0 28px}
+.services,.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.service{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:9px}
+.number{color:var(--red);font-size:13px;font-weight:900;letter-spacing:1px}
+.service h3{margin:10px 0 8px}
+.service p,.feature p{color:var(--muted);font-size:14px;margin-bottom:0}
+.why{background:#141519;border-block:1px solid var(--line)}
+.feature{padding:18px;border-left:3px solid var(--red);background:#1a1b20}
+.feature h3{margin:0 0 6px;font-size:17px}
+.contact{background:#18191e}
+.contact-box{border-left:3px solid var(--red);padding-left:20px}
+.contact-box p{color:#c5c5cb}
+.contact-actions{display:flex;flex-wrap:wrap;gap:10px}
+.contact-actions .button{margin-top:8px}
+.note{font-size:12px;color:var(--muted);margin-top:14px}
+footer{padding:22px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:700px){
+.nav{align-items:flex-start;flex-direction:column;padding:16px 0}
+.hero{padding:56px 0}
+.services,.features{grid-template-columns:1fr}
+section{padding:45px 0}
+.logo{font-size:20px}
+.lang{padding:7px 10px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="container nav">
+<a href="#top" class="logo">AUTO<span>FIX</span> GARAGE</a>
+<nav class="languages" aria-label="Language">
+<button class="lang active" data-lang="fi" type="button">FI</button>
+<button class="lang" data-lang="en" type="button">EN</button>
+<button class="lang" data-lang="ru" type="button">RU</button>
+<button class="lang" data-lang="sv" type="button">SV</button>
+<button class="lang" data-lang="uk" type="button">UA</button>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="container">
+<div class="eyebrow" data-i18n="eyebrow">AUTOKORJAAMO · TURKU</div>
+<h1 data-i18n="headline">AUTOSI ANSAITSEE PARASTA.</h1>
+<p data-i18n="intro">Ammattitaitoista autohuoltoa ja korjausta. Luotettavaa palvelua autollesi.</p>
+<a class="button" href="#contact" data-i18n="cta">VARAA HUOLTO</a>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<h2 class="section-title" data-i18n="servicesTitle">PALVELUMME</h2>
+<p class="section-intro" data-i18n="servicesIntro">Huoltoa ja korjausta ammattitaidolla.</p>
+<div class="services">
+<article class="service">
+<div class="number">01 / DIAGNOSTICS</div>
+<h3 data-i18n="s1">Vianetsintä</h3>
+<p data-i18n="d1">Auton sähköinen diagnostiikka ja vikakoodien luku.</p>
+</article>
+<article class="service">
+<div class="number">02 / REPAIR</div>
+<h3 data-i18n="s2">Moottorin huolto</h3>
+<p data-i18n="d2">Moottorin tarkastus ja huoltotyöt.</p>
+</article>
+<article class="service">
+<div class="number">03 / MAINTENANCE</div>
+<h3 data-i18n="s3">Jarrut ja alusta</h3>
+<p data-i18n="d3">Jarrujen ja alustan tarkastus ja korjaus.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="why">
+<div class="container">
+<h2 class="section-title" data-i18n="whyTitle">MIKSI VALITA MEIDÄT?</h2>
+<p class="section-intro" data-i18n="whyIntro">Selkeää palvelua ja huolellista työnjälkeä.</p>
+<div class="features">
+<article class="feature"><h3 data-i18n="f1Title">Ammattitaito</h3><p data-i18n="f1Text">Huolellinen lähestymistapa jokaiseen autoon.</p></article>
+<article class="feature"><h3 data-i18n="f2Title">Selkeä viestintä</h3><p data-i18n="f2Text">Kerro meille autosi ongelmasta ja kysy neuvoa.</p></article>
+<article class="feature"><h3 data-i18n="f3Title">Yksilöllinen palvelu</h3><p data-i18n="f3Text">Palvelu suunnitellaan auton tarpeiden mukaan.</p></article>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="contact-box">
+<h2 class="section-title" data-i18n="contactTitle">OTA YHTEYTTÄ</h2>
+<p data-i18n="contactText">Ota yhteyttä ja kysy huollosta tai korjauksesta.</p>
+<p><strong>AutoFix Garage</strong><br><span data-i18n="location">Turku, Finland</span></p>
+<div class="contact-actions">
+<a class="button" href="tel:+358401234567"><span data-i18n="callButton">SOITA MEILLE</span></a>
+<a class="button secondary" href="https://wa.me/358401234567" target="_blank" rel="noopener noreferrer"><span data-i18n="whatsappButton">WHATSAPP</span></a>
+<a class="button secondary" href="mailto:example@example.com"><span data-i18n="emailButton">LÄHETÄ SÄHKÖPOSTIA</span></a>
+</div>
+<p class="note" data-i18n="demoNote">Demo-sivusto: yhteystiedot ovat väliaikaisia.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container">© <span id="year"></span> AutoFix Garage</div></footer>
+
+<script>
+const translations = {
+fi:{
+eyebrow:"AUTOKORJAAMO · TURKU",
+headline:"AUTOSI ANSAITSEE PARASTA.",
+intro:"Ammattitaitoista autohuoltoa ja korjausta. Luotettavaa palvelua autollesi.",
+cta:"VARAA HUOLTO",servicesTitle:"PALVELUMME",
+servicesIntro:"Huoltoa ja korjausta ammattitaidolla.",
+s1:"Vianetsintä",d1:"Auton sähköinen diagnostiikka ja vikakoodien luku.",
+s2:"Moottorin huolto",d2:"Moottorin tarkastus ja huoltotyöt.",
+s3:"Jarrut ja alusta",d3:"Jarrujen ja alustan tarkastus ja korjaus.",
+whyTitle:"MIKSI VALITA MEIDÄT?",whyIntro:"Selkeää palvelua ja huolellista työnjälkeä.",
+f1Title:"Ammattitaito",f1Text:"Huolellinen lähestymistapa jokaiseen autoon.",
+f2Title:"Selkeä viestintä",f2Text:"Kerro meille autosi ongelmasta ja kysy neuvoa.",
+f3Title:"Yksilöllinen palvelu",f3Text:"Palvelu suunnitellaan auton tarpeiden mukaan.",
+contactTitle:"OTA YHTEYTTÄ",contactText:"Ota yhteyttä ja kysy huollosta tai korjauksesta.",
+location:"Turku, Finland",callButton:"SOITA MEILLE",
+whatsappButton:"WHATSAPP",emailButton:"LÄHETÄ SÄHKÖPOSTIA",
+demoNote:"Demo-sivusto: yhteystiedot ovat väliaikaisia."
+},
+en:{
+eyebrow:"AUTO REPAIR · TURKU",
+headline:"YOUR CAR DESERVES THE BEST.",
+intro:"Professional car servicing and repairs. Reliable care for your vehicle.",
+cta:"BOOK A SERVICE",servicesTitle:"OUR SERVICES",
+servicesIntro:"Professional maintenance and repair.",
+s1:"Diagnostics",d1:"Electronic diagnostics and fault-code reading.",
+s2:"Engine service",d2:"Engine inspection and maintenance.",
+s3:"Brakes and suspension",d3:"Brake and suspension inspection and repair.",
+whyTitle:"WHY CHOOSE US?",whyIntro:"Straightforward service and careful workmanship.",
+f1Title:"Professional care",f1Text:"A careful approach to every vehicle.",
+f2Title:"Clear communication",f2Text:"Tell us about your car and ask for advice.",
+f3Title:"Personal service",f3Text:"Service tailored to your vehicle's needs.",
+contactTitle:"CONTACT US",contactText:"Get in touch to ask about servicing or repairs.",
+location:"Turku, Finland",callButton:"CALL US",
+whatsappButton:"WHATSAPP",emailButton:"SEND AN EMAIL",
+demoNote:"Demo website: contact details are temporary."
+},
+ru:{
+eyebrow:"АВТОСЕРВИС · ТУРКУ",
+headline:"ВАШ АВТОМОБИЛЬ ЗАСЛУЖИВАЕТ ЛУЧШЕГО.",
+intro:"Профессиональное обслуживание и ремонт автомобилей. Надёжный сервис для вашего автомобиля.",
+cta:"ЗАПИСАТЬСЯ",servicesTitle:"НАШИ УСЛУГИ",
+servicesIntro:"Профессиональное обслуживание и ремонт.",
+s1:"Диагностика",d1:"Компьютерная диагностика и чтение кодов ошибок.",
+s2:"Ремонт двигателя",d2:"Проверка двигателя и техническое обслуживание.",
+s3:"Тормоза и подвеска",d3:"Проверка и ремонт тормозной системы и подвески.",
+whyTitle:"ПОЧЕМУ ВЫБИРАЮТ НАС?",whyIntro:"Понятный сервис и внимательное отношение к работе.",
+f1Title:"Профессиональный подход",f1Text:"Внимательно относимся к каждому автомобилю.",
+f2Title:"Понятное общение",f2Text:"Расскажите о проблеме автомобиля и задайте вопросы.",
+f3Title:"Индивидуальный подход",f3Text:"Подбираем обслуживание под потребности автомобиля.",
+contactTitle:"СВЯЗАТЬСЯ С НАМИ",contactText:"Свяжитесь с нами по вопросам ремонта и обслуживания.",
+location:"Турку, Финляндия",callButton:"ПОЗВОНИТЬ",
+whatsappButton:"WHATSAPP",emailButton:"НАПИСАТЬ НА ПОЧТУ",
+demoNote:"Демонстрационный сайт: контактные данные временные."
+},
+sv:{
+eyebrow:"BILVERKSTAD · ÅBO",
+headline:"DIN BIL FÖRTJÄNAR DET BÄSTA.",
+intro:"Professionell bilservice och reparation. Pålitlig service för din bil.",
+cta:"BOKA SERVICE",servicesTitle:"VÅRA TJÄNSTER",
+servicesIntro:"Professionell service och reparation.",
+s1:"Felsökning",d1:"Elektronisk diagnostik och avläsning av felkoder.",
+s2:"Motorservice",d2:"Motorinspektion och underhåll.",
+s3:"Bromsar och fjädring",d3:"Kontroll och reparation av bromsar och fjädring.",
+whyTitle:"VARFÖR VÄLJA OSS?",whyIntro:"Tydlig service och noggrant utfört arbete.",
+f1Title:"Yrkeskunskap",f1Text:"Vi tar hand om varje bil med omsorg.",
+f2Title:"Tydlig kommunikation",f2Text:"Berätta om bilens problem och fråga oss om råd.",
+f3Title:"Personlig service",f3Text:"Servicen anpassas efter bilens behov.",
+contactTitle:"KONTAKTA OSS",contactText:"Kontakta oss för frågor om service och reparation.",
+location:"Åbo, Finland",callButton:"RING OSS",
+whatsappButton:"WHATSAPP",emailButton:"SKICKA E-POST",
+demoNote:"Demowebbplats: kontaktuppgifterna är tillfälliga."
+},
+uk:{
+eyebrow:"АВТОСЕРВІС · ТУРКУ",
+headline:"ВАШ АВТОМОБІЛЬ ЗАСЛУГОВУЄ НА НАЙКРАЩЕ.",
+intro:"Професійне обслуговування та ремонт автомобілів. Надійний сервіс для вашого авто.",
+cta:"ЗАПИСАТИСЯ",servicesTitle:"НАШІ ПОСЛУГИ",
+servicesIntro:"Професійне обслуговування та ремонт.",
+s1:"Діагностика",d1:"Комп'ютерна діагностика та зчитування кодів помилок.",
+s2:"Ремонт двигуна",d2:"Перевірка двигуна та технічне обслуговування.",
+s3:"Гальма та підвіска",d3:"Перевірка та ремонт гальмівної системи й підвіски.",
+whyTitle:"ЧОМУ ОБИРАЮТЬ НАС?",whyIntro:"Зрозумілий сервіс і уважне ставлення до роботи.",
+f1Title:"Професійний підхід",f1Text:"Уважно ставимося до кожного автомобіля.",
+f2Title:"Зрозуміле спілкування",f2Text:"Розкажіть про проблему автомобіля та поставте запитання.",
+f3Title:"Індивідуальний сервіс",f3Text:"Підбираємо обслуговування відповідно до потреб авто.",
+contactTitle:"ЗВ'ЯЖІТЬСЯ З НАМИ",contactText:"Звертайтеся щодо ремонту та обслуговування.",
+location:"Турку, Фінляндія",callButton:"ЗАТЕЛЕФОНУВАТИ",
+whatsappButton:"WHATSAPP",emailButton:"НАПИСАТИ НА ПОШТУ",
+demoNote:"Демонстраційний сайт: контактні дані тимчасові."
+}
+};
+
+function setLanguage(lang){
+const content=translations[lang];
+if(!content)return;
+document.documentElement.lang=lang;
+document.querySelectorAll("[data-i18n]").forEach(element=>{
+const key=element.dataset.i18n;
+if(Object.prototype.hasOwnProperty.call(content,key)){
+element.textContent=content[key];
+}
+});
+document.querySelectorAll(".lang").forEach(button=>{
+const active=button.dataset.lang===lang;
+button.classList.toggle("active",active);
+button.setAttribute("aria-pressed",String(active));
+});
+}
+
+document.querySelectorAll(".lang").forEach(button=>{
+button.addEventListener("click",()=>setLanguage(button.dataset.lang));
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+setLanguage("fi");
+</script>
+</body>
+</html>
+
